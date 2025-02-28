@@ -30,10 +30,11 @@ button {
 }
 
 form {
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 300px;
+    gap: 20px;
+    width: 70%;
 }
 
 input {
@@ -213,7 +214,7 @@ svg {
 }
 
 #loginView {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -224,8 +225,14 @@ svg {
 #loginView .centerLogin {
     padding: 20px 100px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 2px solid rgba(0, 0, 0, 0.493);
     box-shadow: 0 5px 15px white inset, 0 5px 15px black;
+    width: 95%;
+    max-width: 300px;
 
 }
 
@@ -233,7 +240,6 @@ svg {
 #password {
     background-color: transparent;
     margin-bottom: 10px;
-
     border: none;
     border-bottom: 2px solid black;
 }
@@ -274,14 +280,6 @@ svg {
         padding: 1%;
     }
 
-    /* #logoutButton {
-        transform: translateX(0);
-        margin: 10px auto;
-    } */
-
-    form {
-        max-width: 100%;
-    }
 
     #loginView .centerLogin {
         padding: 20px;
