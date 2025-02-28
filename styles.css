@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext');
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    /* color: white; */
+    font-family: 'Quicksand', sans-serif;
+    /* background: #092756; */
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 10px;
+    /* background: radial-gradient(ellipse farthest-corner at 0% 100%, rgba(104,128,138,.4) 10%, rgba(138,114,76,0) 40%), linear-gradient(to bottom, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%); */
+    box-shadow: inset 0 0 100px hsla(0, 0%, 0%, .3);
+    background-image: linear-gradient(#8b9da9, #fff6e4);
+
+}
+
+h1,
+h2 {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+input {
+    padding: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.data-point text {
+    /* visibility: hidden; */
+    opacity: 0;
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+.first-time {
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+.data-point circle {
+    transition: r 0.2s;
+}
+
+.data-point:hover text {
+    /* visibility: visible; */
+    opacity: 1;
+}
+
+.data-point:hover circle {
+    r: 5;
+}
+
+.info,
+.graphs {
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.graphs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graphs h2,
+h3 {
+    align-self: flex-start;
+}
+
+svg {
+    border: 1px solid #ddd;
+    box-shadow: 0 0 2px black;
+}
+
+
+
+#logoutButton {
+    background: url(log-out.svg) no-repeat center;
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.363);
+    box-shadow: 0 0 5px white inset, 0 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    transform: translateX(calc(100vw - 100% - 20px));
+    margin-block: 20px;
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+
+#skills p {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 10px 15px;
+    /* min-width: 100px; */
+    margin: 5px;
+    text-align: center;
+    position: relative;
+    /* border-radius: px; */
+    box-shadow: 0 0 5px white inset, 0 5px 5px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#skills p .progress {
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* width: 100%; */
+    background-color: royalblue;
+}
+#skills p .back-progress {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    /* width: 100%; */
+    background-color: rgba(65, 105, 225, 0.274);
+}
+
+#skills {
+    display: flex;
+    /* max-height: 400px; */
+    /* overflow-y: scroll; */
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.grid>div {
+    backdrop-filter: blur(20px);
+    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.623);
+}
+
+
+
+/* Paragraphs (Login, Email, XP, Level) */
+#login,
+#email,
+#totalXP,
+#level {
+    margin: 5px 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+#login {
+
+    color: #2b2929;
+    /* Light gray */
+    font-style: italic;
+}
+
+#email {
+    color: #2b2929;
+    /* Light gray */
+}
+
+#totalXP {
+    color: royalblue;
+    /* Soft red */
+    font-size: 64px;
+    font-weight: lighter;
+}
+
+
+#level{
+    float: right;
+    color: royalblue;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed royalblue;
+    box-shadow: 0 0 5px black;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+#ErrorView {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#loginView {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginView .centerLogin {
+    padding: 20px 100px;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.493);
+    box-shadow: 0 5px 15px white inset, 0 5px 15px black;
+
+}
+
+#loginView #username,
+#password {
+    background-color: transparent;
+    margin-bottom: 10px;
+
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+#loginView button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0 0px 5px white inset, 0 0px 5px black;
+
+}
+
+#loginView #error {
+    margin: 0;
+}
+
+#ErrorView .back-btn {
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+}
+
+@media (max-width: 785px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .graphs {
+        padding: 1%;
+    }
+
+    /* #logoutButton {
+        transform: translateX(0);
+        margin: 10px auto;
+    } */
+
+    form {
+        max-width: 100%;
+    }
+
+    #loginView .centerLogin {
+        padding: 20px;
+    }
+    #level{
+        float: unset;
+        margin: auto;
+
+
+    }
+
+    #skills p {
+        padding: 5px 10px;
+    }
+}
