@@ -1,18 +1,20 @@
 // Define routes with path keys and corresponding view functions
 
 import { $404, HOME, LOGIN  } from "./components.js";
-import { fetchData, user, XPOverTime } from "./data.js";
+import { fetchData, parseResponse, user, XPOverTime } from "./data.js";
 import { generateAuditRatioGraph, generateXPOverTimeGraph } from "./graph.js";
 
 export const container = document.getElementById("app")
 const routes = {
     '/': async() => {
-        container.innerHTML = HOME.html;
-        HOME.event()
-        await fetchData()  
-        generateXPOverTimeGraph(XPOverTime)  
-        generateAuditRatioGraph()
-        console.log(user)
+        const data = await fetchData() 
+        if (data){
+            container.innerHTML = HOME.html;
+            HOME.event()
+            parseResponse(data)
+            generateXPOverTimeGraph(XPOverTime)  
+            generateAuditRatioGraph()
+        } 
             
     },
     '/login': () => {

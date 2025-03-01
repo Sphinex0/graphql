@@ -39,9 +39,9 @@ export const HOME = {
                           <div class="graphs">
                               <h2>Statistics</h2>
                               <h3>XP progression</h3>
-                              <svg id="xpOverTime" width="400" height="200" ></svg>
+                              <svg id="xpOverTime" width="400" height="200" viewBox="0 0 400 200"></svg>
                               <h3>Audits ratio</h3>
-                              <svg id="AuditRatio" width="400" height="200" ></svg>
+                              <svg id="AuditRatio" width="400" height="200" viewBox="0 0 400 200"></svg>
                           </div>
                       </div>
                   </div>

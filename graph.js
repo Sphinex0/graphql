@@ -85,8 +85,9 @@ export function generateAuditRatioGraph() {
     const availableWidth = width - leftMargin - rightMargin;
 
     // Calculate maximum value for scaling, with fallback to avoid division by zero
-    const maxValue = Math.max(AuditsRatio.totalDown, AuditsRatio.totalUp) || 1;
+    const maxValue = Math.max(AuditsRatio.totalDown, AuditsRatio.totalUp, 1);
     const up = AuditsRatio.totalUp > AuditsRatio.totalDown
+
     // Calculate line lengths proportional to values
     const lineLengthDown = (AuditsRatio.totalDown / maxValue) * availableWidth;
     const lineLengthUp = ((AuditsRatio.totalUp + AuditsRatio.totalUpBonus) / maxValue) * availableWidth;

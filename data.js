@@ -35,10 +35,12 @@ export const parseResponse = (responseData) => {
     AuditsRatio = data.AuditsRatio[0];
     document.querySelector(".info").innerHTML = /*html */`
     <h1 id="firstName">${user.firstName} ${user.lastName}</h1>
+    <div>
     <p id="level">${user.level}</p>
     <p id="login">#${user.login}</p>
     <p id="email">${user.email}</p>
     <p id="totalXP">${convertXPToReadable(user.totalXP)}</p>
+    </div>
     <div id="skills">
     ${skills.map(skill => `<p>${skill.type} ${skill.maxAmount}%<span class="progress" style="width:${skill.maxAmount}%;"></span><span class="back-progress" style="width:${skill.maxAmount}%;"></span></p>`).join('')}
     </div>
@@ -65,12 +67,9 @@ export const fetchData = async () => {
             navigateTo("/login")
             return
         }
+        return data
         // Parse the response
-        parseResponse(data);
-
-        // Display the results
-        console.log("User Information:");
-        console.log({ user, XPOverTime, skills, AuditsRatio });
+        // parseResponse(data);
     }
 
 }

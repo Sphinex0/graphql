@@ -77,6 +77,11 @@ input {
     padding: 15px;
     border: 1px solid #ccc;
 }
+.info{
+
+    display: flex;
+    flex-direction: column;
+}
 
 .graphs {
     display: flex;
@@ -92,6 +97,9 @@ h3 {
 svg {
     border: 1px solid #ddd;
     box-shadow: 0 0 2px black;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
 }
 
 
@@ -142,6 +150,7 @@ svg {
 }
 
 #skills {
+    margin-block: auto;
     display: flex;
     /* max-height: 400px; */
     /* overflow-y: scroll; */
