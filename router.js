@@ -1,7 +1,7 @@
 // Define routes with path keys and corresponding view functions
 
 import { $404, HOME, LOGIN  } from "./components.js";
-import { fetchData, parseResponse, user, XPOverTime } from "./data.js";
+import { fetchData, parseResponse, XPOverTime } from "./data.js";
 import { generateAuditRatioGraph, generateXPOverTimeGraph } from "./graph.js";
 
 export const container = document.getElementById("app")
@@ -35,6 +35,7 @@ const routes = {
 function router() {
     // Get the current path from the URL
     let path = window.location.pathname;
+
     // Select the view function, default to home if path isn't found
     const viewFunction = routes[path] || routes['/404'];
     viewFunction();
